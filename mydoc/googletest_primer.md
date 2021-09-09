@@ -220,6 +220,8 @@ TEST_F(QueueTest, DequeueWorks) {
 5. t1 被销毁了。
 6. 在另一个QueueTest对象上重复上述步骤，这次运行DequeueWorks测试。
 
+也就是fixture类不会被复用。
+
 ## 7. 测试调用
 
 TEST()和TEST_F()隐式地向 googletest 注册他们的测试。定义测试后，您可以使用 RUN_ALL_TESTS() 运行它们，如果所有测试都成功，则返回0，否则返回1。请注意，RUN_ALL_TESTS() 将运行链接单元中的所有测试——它们可以来自不同的测试套件，甚至来自不同的源文件。
